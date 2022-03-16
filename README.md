@@ -20,6 +20,9 @@ Now we pretty much copy and paste this 3 more times for each offsetted pixel(Thi
 For the normal lines, we can pretty much copy and paste the entire code. What we need to change is the `SceneTexture:SceneDepth` to `SceneTexture:WorldNormal`. Now remember how we masked out the only the `R` channel. We need now `RGB` masking because we need to compare the `X`, `Y`, and `Z` of the scene.
 
 ![](https://user-images.githubusercontent.com/29154540/158485824-217eb431-62bd-451b-b075-425d53943750.png)
+
+Here is the full Code.
+
 ![](https://user-images.githubusercontent.com/29154540/158482180-72adbd58-4d81-41fd-b0c4-0eeb4e0ad771.png)
 ![](https://user-images.githubusercontent.com/29154540/158482182-f410c96b-c106-4f6d-87ff-eabe5ebfd6e5.png)
 
