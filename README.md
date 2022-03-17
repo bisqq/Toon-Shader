@@ -3,7 +3,7 @@
 I learned to create a post proccessing toon shader in unreal engine 4.
 
 ## Outline Effect
-The outline effect is a simple process (theoretically), but not so much when it comes to the nodes. We essentially grab the scene normal lines and depth lines and we compare then to find the differences. The simple formula is `Center Pixel - Offset Pixel = Toon Lines`.
+The outline effect is a simple process (theoretically), but not so much when it comes to the nodes. We essentially grab the scene normal lines and depth lines and we compare them and get the difference. The simple formula is `Center Pixel - Offset Pixel = Toon Lines`.
 
 So what we need to do is sample the pixel above, to the left, right, and down from the origin pixel. We start off by getting our `texture coordinate` which is our orgin pixel. Then we need a `SceneTexture:SceneDepth` node to get exactly 1 pixel. Now in order to get the corresponding pixels around we can use a `vector2` and multiply that to our `SceneTexture:SceneDepth` and then we add it to our `texture coordinate` (In this picture we are grabbing the left pixel coordinate). We then want to mask that out with just the `R` channel because we only want the gray scale. Finally we want to take that offset pixel and subtract that from our origin pixel.
 
